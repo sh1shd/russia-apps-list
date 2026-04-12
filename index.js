@@ -55,7 +55,7 @@ const cli = {
 
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-    const content = `#per-app-proxy-mode: bypass\n#per-app-proxy-list: ${list}\n`;
+    const content = `#per-app-proxy-mode: bypass\n#per-app-proxy-list: ${list}\n\nvless://00000000-0000-0000-0000-000000000000@127.0.0.1:80?type=tcp&encryption=none&security=none#Тестовый inbound`;
 
     fs.writeFileSync(paths.happConfig, content, 'utf8');
 
