@@ -4,7 +4,8 @@ const path = require('path');
 
 const paths = {
   applicationsJson: path.join(__dirname, 'data', 'apps.json'),
-  happConfig: path.join(__dirname, 'raw', 'happ.txt')
+  happSubscriptionConfig: path.join(__dirname, 'raw', 'happ-subscription.txt'),
+  happUserConfig: path.join(__dirname, 'raw', 'happ-user.txt'),
 }
 
 const applications = {
@@ -50,16 +51,17 @@ const cli = {
   },
   generateHappConfiguration: () => {
     const apps = applications.load();
-    const list = apps.join(',');
-    const dir = path.dirname(paths.happConfig);
+    const dir = path.dirname(paths.happSubscriptionConfig);
 
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-    const content = `#per-app-proxy-mode: bypass\n#per-app-proxy-list: ${list}\n`;
+    const happSubscriptionContent = `#per-app-proxy-mode: bypass\n#per-app-proxy-list: ${apps.join(',')}\n`;
+    const happUserContent = `${apps.join("\n")}`
 
-    fs.writeFileSync(paths.happConfig, content, 'utf8');
+    fs.writeFileSync(paths.happSubscriptionConfig, happSubscriptionContent, 'utf8');
+    fs.writeFileSync(paths.happUserConfig, happUserContent, 'utf-8')
 
-    console.log(`Generated raw/happ.txt (${apps.length} apps)`);
+    console.log(`Generated app list for Happ (${apps.length} apps)`);
   }
 }
 
