@@ -1,0 +1,20 @@
+{
+  "name": "russia-apps-list",
+  "version": "1.0.0",
+  "description": "A Russia app list (Android)",
+  "main": "index.js",
+  "scripts": {
+    "clean": "node index.js clean",
+    "genHapp": "node index.js genHapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sh1shd/russia-apps-list.git"
+  },
+  "author": "sh1shd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sh1shd/russia-apps-list/issues"
+  },
+  "homepage": "https://github.com/sh1shd/russia-apps-list#readme"
+}
