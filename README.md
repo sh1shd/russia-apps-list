@@ -1,6 +1,6 @@
 # Russia-apps-list
 
-Список российских приложений (+500 приложений) для Android, взятые из RuStore
+Список российских приложений для Android (более 500), собранных из RuStore
 
 ## Краткий список приложений
 
@@ -9,7 +9,7 @@
 > [!WARNING]
 > Это неполный перечень — полный список пакетов хранится в `data/apps.json`.
 
-- ⚡ Сервисы Яндекс — `ru.yandex.*`, `com.yandex.*`
+- ⚡ Сервисы Яндекса — `ru.yandex.*`, `com.yandex.*`
 - ⚡ Сервисы Ozon — `ru.ozon.*`
 - ⚡ Сервисы Wildberries — `com.wildberries.ru`, `ru.wildberries.*`
 - ⚡ Сервисы ВКонтакте — `com.vk.*`
@@ -27,3 +27,20 @@
 - Пятёрочка, Магнит — `ru.pyaterochka.app.browser`, `ru.magnit.*`
 - Rutube — `ru.rutube.app`
 - Uchi (обучение) — `com.uchi.*`
+
+## Как использовать?
+
+### Happ
+
+#### Сервер подписок
+1. Откройте [happ-subscription.txt](https://raw.githubusercontent.com/sh1shd/russia-apps-list/refs/heads/master/raw/happ-subscription.txt) и полностью скопируйте содержимое файла.  
+2. Настройте сервер подписок так, чтобы перед ключами он вставлял именно этот текст.
+
+#### Клиент (Android)
+1. Откройте [happ-user.txt](https://raw.githubusercontent.com/sh1shd/russia-apps-list/refs/heads/master/raw/happ-user.txt) и полностью скопируйте содержимое файла.  
+2. В приложении Happ перейдите в настройки.  
+3. Выберите «Прокси для выбранных приложений».  
+4. Установите режим «Обход».  
+5. Нажмите на меню (⋮), выберите «Импорт из буфера обмена», затем «Инвертировать».
+
+Готово!
