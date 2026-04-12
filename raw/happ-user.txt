@@ -117,7 +117,6 @@ com.sberbank.sberpravo
 com.sdkit.search.app
 com.sebbia.delivery
 com.setinbox.game
-com.shaiban.audioplayer.mplayer
 com.sovcombank.mpp
 com.spbtv.rosing
 com.taxsee.driver
@@ -630,7 +629,6 @@ tv.lfstrm.smotreshka
 tv.ntvplus.app
 tv.okko.androidtv
 ua.itaysonlab.vkx
-video.like.rustore
 wb.partners
 wildberries.business
 www.metro.com
