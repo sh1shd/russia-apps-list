@@ -1,11 +1,13 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+import fs from "node:fs";
+import path from "node:path";
+
+import { YAML } from "bun";
 
 const paths = {
   applicationsJson: path.join(__dirname, 'data', 'apps.json'),
   happSubscriptionConfig: path.join(__dirname, 'raw', 'happ-subscription.txt'),
   happUserConfig: path.join(__dirname, 'raw', 'happ-user.txt'),
+  mihomoConfig: path.join(__dirname, 'raw', 'mihomo-rules.yaml')
 }
 
 const applications = {
@@ -62,6 +64,24 @@ const cli = {
     fs.writeFileSync(paths.happUserConfig, happUserContent, 'utf-8')
 
     console.log(`Generated app list for Happ (${apps.length} apps)`);
+  },
+  generateMihonoRules: () => {
+    const apps = applications.load();
+    const dir = path.dirname(paths.happSubscriptionConfig);
+
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+    const yamlObject = {
+      payload: []
+    }
+
+    apps.forEach(element => {
+      yamlObject.payload.push(`PROCESS-NAME,${element}`)
+    });
+
+    fs.writeFileSync(paths.mihomoConfig, YAML.stringify(yamlObject, null, 2), 'utf-8')
+
+    console.log(`Generated rules for Clash Mihomo (${apps.length} apps)`);
   }
 }
 
@@ -78,6 +98,9 @@ const index = () => {
       break;
     case "genHapp":
       cli.generateHappConfiguration()
+      break;
+    case "genMihomo":
+      cli.generateMihonoRules()
       break;
     default:
       console.error('Unknown command:', cmd);

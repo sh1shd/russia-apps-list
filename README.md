@@ -43,4 +43,21 @@
 4. Установите режим «Обход».  
 5. Нажмите на меню (⋮), выберите «Импорт из буфера обмена», затем «Инвертировать».
 
+#### Клиент & сервер (Clash Mihomo)
+1. Измените конфигурационный файл, добавьте следующее:
+
+```yaml
+rule-providers:
+  russia-apps:
+    type: http
+    url: "https://raw.githubusercontent.com/sh1shd/russia-apps-list/refs/heads/master/raw/mihomo-rules.yaml"
+    interval: 600
+    behavior: classical
+    format: yaml
+
+rules:
+    # ...ваши правила
+    - "RULE-SET,russia-apps,DIRECT" # или другой прокси
+```
+
 Готово!
