@@ -8,25 +8,18 @@
 
 > [!WARNING]
 > Это неполный перечень — полный список пакетов хранится в `data/apps.json`. Страницы разработчиков, откуда берутся приложения, находятся в файле `src/constants.ts`
+> https://github.com/sh1shd/russia-apps-list/blob/982c0df5d523f0b96ece01726ae8ba0a26bc3057/src/constants.ts#L1
 
-- ⚡ Сервисы Яндекса — `ru.yandex.*`, `com.yandex.*`
-- ⚡ Сервисы Ozon — `ru.ozon.*`
-- ⚡ Сервисы Wildberries — `com.wildberries.ru`, `ru.wildberries.*`
-- ⚡ Сервисы ВКонтакте — `com.vk.*`
-- ⚡ Сервисы операторов «большой четверки» — `com.megafon.*`, `ru.mts.*`, `ru.tele2.*`, `ru.beeline.*`
-- ⚡ Госуслуги (разные модули) — `ru.gosuslugi.*`
-- Федеральная налоговая служба (ФНС) — `ru.fns.*`
-- Почта России (мобильный клиент) — `com.octopod.russianpost.client.android`, `ru.russianpost.pechkin`
-- Московские сервисы — `ru.mos.*`
-- Сервисы АО «Сбер» — `ru.sberbankmobile`, `com.sberbank.sberpravo`
-- Сервисы АО «ТБанк» — `ru.tinkoff.*`
-- Сервисы АО «ВТБ» — `az.vtb.android`, `ru.vtb.*`
-- Газпромбанк, Райффайзен, РSHB и др. (также их сервисы) — `ru.gazprombank.android.mobilebank.app`, `ru.raiffeisennews`, `ru.rshb.*`
-- РЖД и железнодорожные сервисы — `ru.rzd.pass`, `ru.rzd.*`
-- Туту (расписания и билеты) — `ru.tutu.etrains`
-- Пятёрочка, Магнит — `ru.pyaterochka.app.browser`, `ru.magnit.*`
-- Rutube — `ru.rutube.app`
-- Uchi (обучение) — `com.uchi.*`
+- Национальный мессенджер MAX (МАКС)
+- Социальная сеть ВКонтакте, VK Мессенджер, VK Музыка, VK Видео
+- СберБанк Онлайн, СберИнвестиции
+- Авито
+- Т-Банк (Тinkoff), Т-Инвестиции
+- Ozon (Маркетплейс, Ozon Банк)
+- ВТБ Онлайн, ВТБ Мои Инвестиции
+- Альфа-Банк, Альфа-Инвестиции
+- Портал «Госуслуги», Госуслуги Авто, Госуслуги Культура
+- Маркетплейс Wildberries, WB Point
 
 ## Как использовать?
 
