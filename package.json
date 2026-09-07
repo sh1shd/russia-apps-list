@@ -1,12 +1,16 @@
 {
   "name": "russia-apps-list",
-  "version": "1.0.0",
   "description": "A Russia app list (Android)",
-  "main": "index.js",
-  "scripts": {
-    "clean": "node index.js clean",
-    "genHapp": "node index.js genHapp",
-    "genMihomo": "node index.js genMihomo"
+  "module": "index.ts",
+  "version": "2.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cheerio": "^1.0.0",
+    "@types/yargs": "^17.0.35"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
   },
   "repository": {
     "type": "git",
@@ -17,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/sh1shd/russia-apps-list/issues"
   },
-  "homepage": "https://github.com/sh1shd/russia-apps-list#readme"
+  "homepage": "https://github.com/sh1shd/russia-apps-list#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "yargs": "^18.1.0"
+  }
 }
