@@ -139,6 +139,7 @@ const developers = [
 ]
 
 const externalApps = [
+    "ru.vk.store", // RuStore
     "ua.itaysonlab.vkx", // VK X
     "com.hintsolutions.donor", // Служба Крови
     "com.haulmont.rsmu" // Портал НМФО

@@ -632,6 +632,7 @@ payload:
   - "PROCESS-NAME,ru.urentbike.app"
   - "PROCESS-NAME,ru.utk.dostavka"
   - "PROCESS-NAME,ru.vk.hrtek"
+  - "PROCESS-NAME,ru.vk.store"
   - "PROCESS-NAME,ru.vtb.corporate.android.main_application"
   - "PROCESS-NAME,ru.vtb.invest"
   - "PROCESS-NAME,ru.vtb.smb"

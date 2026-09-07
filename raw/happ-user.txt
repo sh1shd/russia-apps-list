@@ -631,6 +631,7 @@ ru.uralsib.business
 ru.urentbike.app
 ru.utk.dostavka
 ru.vk.hrtek
+ru.vk.store
 ru.vtb.corporate.android.main_application
 ru.vtb.invest
 ru.vtb.smb
