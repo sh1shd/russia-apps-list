@@ -11,7 +11,7 @@ class Scanner {
   private static readonly APPS_PATH = path.resolve(process.cwd(), 'data', 'apps.json')
   private static readonly BASE_URL = 'https://www.rustore.ru'
   private static readonly USER_AGENT =
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36'
 
   private static async readApps(): Promise<AppsData> {
     try {
@@ -50,7 +50,10 @@ class Scanner {
       headers: {
         'User-Agent': this.USER_AGENT,
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8'
+        'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8',
+        'sec-ch-ua': `Chromium";v="152", "Not?A_Brand";v="24", "Google Chrome";v="152"`,
+        'sec-ch-ua-mobile': "?0",
+        'sec-ch-ua-platform': "Windows"
       }
     })
 
@@ -60,6 +63,7 @@ class Scanner {
     }
 
     const rawHtml = await response.text()
+
     return { $: load(rawHtml), rawHtml }
   }
 
